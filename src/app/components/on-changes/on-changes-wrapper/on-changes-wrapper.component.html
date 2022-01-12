@@ -1,0 +1,25 @@
+<h2 class="title">OnChanges</h2>
+<h3 class="subtitle">Wrapper component</h3>
+
+<div class="content">
+  <div>
+    <p>
+      Current number: <span class="accent-text">{{ counter }}</span>
+    </p>
+    <button class="button" (click)="increase()">Increase</button>
+  </div>
+
+  <div>
+    <p>Books:</p>
+    <ul>
+      <li *ngFor="let book of books">{{ book }}</li>
+    </ul>
+    <button class="button" (click)="addBooks()" [disabled]="isDisabled">
+      Add books
+    </button>
+  </div>
+</div>
+
+<div class="border-line"></div>
+
+<app-on-changes [counter]="counter" [books]="books"></app-on-changes>

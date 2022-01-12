@@ -1,0 +1,19 @@
+<h3 class="subtitle">Component with DoCheck</h3>
+
+<div>
+  <p>
+    docheckCount: <span class="accent-text">{{ docheckCount }}</span>
+  </p>
+
+  <p>
+    Current customer:
+    <span *ngIf="customer.name" class="accent-text"
+      >{{ customer.name }}, {{ customer.age }} years old</span
+    >
+  </p>
+
+  <h5>Changelog:</h5>
+  <ul *ngIf="changelog.length">
+    <li *ngFor="let log of changelog">{{ log }}</li>
+  </ul>
+</div>

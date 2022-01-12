@@ -1,0 +1,44 @@
+<h2 class="title">Hooks order</h2>
+<div>
+  <p>
+    Navigate to any another page to see
+    <span class="accent-text">OnDestroy</span> hook works. For example, go to
+    <a [routerLink]="['/']">main page</a>!
+  </p>
+
+  <p>
+    The Angular executes the hooks in the following order On Component
+    <b>Creation</b>:
+  </p>
+  <ol>
+    <li *ngFor="let hook of creationHooks">{{ hook }}</li>
+  </ol>
+
+  <p>When the Component <b>with Child</b> Component is being created:</p>
+  <ol>
+    <li *ngFor="let hook of creationHooks">
+      <ng-container *ngIf="hook === 'AfterContentChecked'; else elseTemplate">
+        <span>{{ hook }}</span>
+        <ol>
+          <li *ngFor="let childHook of creationHooks">
+            Child Component -> {{ childHook }}
+          </li>
+        </ol>
+      </ng-container>
+      <ng-template #elseTemplate>
+        {{ hook }}
+      </ng-template>
+    </li>
+  </ol>
+
+  <p>After The Component is <b>Created</b>:</p>
+  <ol>
+    <li *ngFor="let hook of createdComponentHooks">{{ hook }}</li>
+  </ol>
+
+  <p>
+    The <span class="accent-text">OnChanges</span> hook is fired only if there
+    is an input property defined in the component and it changes. Otherwise, it
+    will never fire
+  </p>
+</div>

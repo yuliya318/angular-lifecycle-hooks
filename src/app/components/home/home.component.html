@@ -1,0 +1,17 @@
+<h4>Introduction</h4>
+
+<p>
+  The life cycle hooks are the methods that angular invokes on the directives
+  and components as it creates, changes, and destroys them. Using lifecycle
+  hooks we can fine-tune the behavior of our components during its creation,
+  updating, and destruction.
+</p>
+
+<div class="image"><img src="assets/angular-lifecycle-hooks.png" /></div>
+
+<h4>Links:</h4>
+<div class="links">
+  <a *ngFor="let link of links" [href]="link.link" target="_blank"
+    >{{ link.name }}
+  </a>
+</div>

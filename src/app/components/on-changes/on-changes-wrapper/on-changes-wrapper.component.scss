@@ -1,0 +1,15 @@
+.subtitle {
+  margin-top: 30px;
+}
+.content {
+  display: flex;
+  min-height: 260px;
+  
+  & div {
+    width: 50%;
+
+    & .button {
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<h2 class="title">AfterViewChecked</h2>
+<h3 class="subtitle">Parent component</h3>
+
+<div>
+  <p>In this component we call ngAfterViewChecked() function.</p>
+
+  <!-- This will cause an error: -->
+  <!-- <p>Data changed in child component: {{ childCompData }}</p> -->
+  <button (click)="changeData()" class="button">Change data</button>
+</div>
+
+<div class="border-line"></div>
+
+<app-after-view-checked-child
+  [data]="data"
+  #childComp
+></app-after-view-checked-child>

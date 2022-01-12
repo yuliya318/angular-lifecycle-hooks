@@ -1,0 +1,18 @@
+<h2 class="title">AfterContentChecked</h2>
+<h3 class="subtitle">Parent component</h3>
+
+<p>In this component we call ngAfterContentChecked() function.</p>
+
+<div>
+  <span>Change message: </span>
+  <input type="text" class="input" [(ngModel)]="someContent" />
+</div>
+
+<div class="border-line"></div>
+
+<app-after-content-init-child>
+  <p>
+    Injected content:
+    <span class="accent-text">{{ someContent }}</span>
+  </p>
+</app-after-content-init-child>

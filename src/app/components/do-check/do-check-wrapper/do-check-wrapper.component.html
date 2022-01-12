@@ -1,0 +1,14 @@
+<h2 class="title">DoCheck</h2>
+<h3 class="subtitle">Wrapper component</h3>
+
+<div>
+  <p>Name : <input type="text" [(ngModel)]="name" class="input"/></p>
+  <p class="id-input">Id : <input type="text" [(ngModel)]="age" class="input"/></p>
+  <p>
+    <button class="button" (click)="updateCustomer()">Update</button>
+  </p>
+</div>
+
+<div class="border-line"></div>
+
+<app-do-check [customer]="customer"></app-do-check>
